@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1767031271268"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1767031271268">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1767031271268">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" class="header">
+				<div class="header__container">
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+				</div>
+			</header>
+			<!-- підключаємо сніжинки -->
+			<link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css?v=1767031271268" rel="stylesheet">
+			<script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js?v=1767031271268"></script>
+			<!--
+<script>
+new Snow();
+</script>
+-->
+			<div class="weather weather--snow">
+				<!-- <div id="snow"></div> -->
+				<div class="weather__container">
+					<header class="weather__header">
+						<img src="./assets/img/logo.svg" alt="logo" class="weather__logo">
+						<form class="weather__block-search">
+							<input name="location" id="location" type="text" placeholder="Search Location..." class="weather__input">
+							<button type="submit" class="weather__btn">
+								<span class="weather__icon --icon-search"></span>
+							</button>
+						</form>
+						<div class="weather__search-btn-blook">
+							<button class="weather__geoBtn">Determine geolocation</button>
+							<div class="weather__output"></div>
+						</div>
+					</header>
+					<main class="weather__main">
+						<div class="weather__items">
+							<div class="weather__item-widget">
+								<div class="weather-widget">
+									<div class="weather-widget__temperature">16°</div>
+									<div class="weather-widget__descr">
+										<div class="weather-widget__location">London</div>
+										<div class="weather-widget__datetime">06:09 - Monday, 9 Sep ‘23</div>
+									</div>
+									<!--
+<div class="weather-widget__icon --icon-cloud">
+</div>
+-->
+									<img class="weather-widget__icon" src="./assets/svgicons/cloud.svg" alt="Image">
+								</div>
+							</div>
+							<div class="weather__item">
+								<section class="weather-details">
+									<h2 class="weather-details__title">Weather Details...</h2>
+									<p class="weather-details__condition">thunderstorm with light drizzle</p>
+									<ul class="weather-details__list">
+										<li class="weather-details__item weather-details__item">
+											<span class="weather-details__label">Temp max</span>
+											<div class="weather-details__temp">
+												<span class="weather-details__value weather-details__value--max">19°</span>
+												<span class="weather-details__icon weather-details__icon--temp-max --icon-temperature"></span>
+											</div>
+										</li>
+										<li class="weather-details__item weather-details__item">
+											<span class="weather-details__label">Temp min</span>
+											<div class="weather-details__temp">
+												<span class="weather-details__value weather-details__value--min">15°</span>
+												<span class="weather-details__icon weather-details__icon--temp-min --icon-temperature"></span>
+											</div>
+										</li>
+										<li class="weather-details__item weather-details__item">
+											<span class="weather-details__label">Feels like</span>
+											<div class="weather-details__temp">
+												<span class="weather-details__value weather-details__value--feels">9°</span>
+												<span class="weather-details__icon weather-details__icon--temp-max --icon-temperature"></span>
+											</div>
+										</li>
+										<li class="weather-details__item">
+											Humadity
+											<div class="weather-details__wrapper-item">
+												<span class="weather-details__value-humadity">91%</span>
+												<span class="weather-details__icon --icon-humadity"></span>
+											</div>
+										</li>
+										<li class="weather-details__item">
+											Cloudy
+											<div class="weather-details__wrapper-item">
+												<span class="weather-details__value-cloudy">0%</span>
+												<span class="weather-details__icon --icon-cloud"></span>
+											</div>
+										</li>
+										<li class="weather-details__item">
+											Wind
+											<div class="weather-details__wrapper-item">
+												<span class="weather-details__value-wind">5
+										m/s</span>
+												<span class="weather-details__icon --icon-wind"></span>
+											</div>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container"></div>
+			</footer>
+		</div>
+	</body>
+</html>
