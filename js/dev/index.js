@@ -49,7 +49,7 @@ form.addEventListener("submit", async (e) => {
   }
 });
 async function getCoordinatesByCityName(cityName) {
-  const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`);
+  const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`);
   const data = await response.json();
   console.log(data);
   console.log(data[0].lat);
@@ -60,8 +60,7 @@ async function getCoordinatesByCityName(cityName) {
 }
 let snowEffect;
 async function getWeatherMain(lat, lon) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=en
-`);
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=en`);
   const data = await response.json();
   console.log(data);
   if (data.list[0].weather[0].main === "Snow") {
@@ -106,6 +105,7 @@ ${fullDay}`;
   document.querySelector(".weather-widget__icon").src = iconUrl;
   const img = document.createElement("img");
   img.src = iconUrl2;
+  console.log(img);
   condition.append(img);
 }
 getWeatherMain();
